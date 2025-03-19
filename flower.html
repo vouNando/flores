@@ -2,17 +2,38 @@
 <html lang="es">
   
   <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="css/main.css" />
-    <link rel="icon" href="img/miniña.jpeg" type="image/x-icon" />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="icon" href="imag/cat.gif" type="image/x-icon">
     <title>Flower</title>
   </head>
-  <body class="container">
-    <audio src="sound/Flores Amarillas - Floricienta - High Quality.mp3" autoplay></audio>
+  <body class="container" style="background-color: black;">
+    <audio src="sound/felizCumple.mp3" autoplay></audio>
     
-    <h1 class="titulo">Quiero que sepas que te amare toda la vida si me lo permites ♡</h1>
+    
+    
+    <h1 class="titulo">¡Feliz cumpleaños, mom! Gracias por ser la mejor mamá del mundo,Te quiero muchísimo . ♡</h1>
+    
+    <div >
+    <div class="carousel-container">
+        <div class="carousel" id="carousel">
+            
+          <img src="imag/2.jpg" alt="Foto 1">
+          <img src="imag/3.jpg" alt="Foto 2">
+          <img src="imag/10.gif" alt="Foto 3">
+          <img src="imag/4.jpg" alt="Foto 4">
+          <img src="imag/5.jpg" alt="Foto 5">
+          <img src="imag/6.jpg" alt="Foto 6">
+          <img src="imag/9.gif" alt="Foto 7">
+          <img src="imag/7.jpg" alt="Foto 8">
+          <img src="imag/8.jpg" alt="Foto 9">
+          <img src="imag/2.jpg" alt="Foto 10">
+           
+        </div>
+    </div>
+  </div>
     <div class="custom-background"></div>
     <div class="flowers">
       <div class="flower flower--1">
@@ -324,8 +345,21 @@
       </div>
     
     </div>
+
+    
+    
+    
     
     <script src="anim.js"></script>
     <script src="main.js"></script>
+    <script>
+      const carousel = document.getElementById('carousel');
+      let index = 0;
+      function showNextImage() {
+          index = (index + 1) % 6;
+          carousel.style.transform = `translateX(-${index * 100}%)`;
+      }
+      setInterval(showNextImage, 3000);  // Cambia de imagen cada 3 segundos
+  </script>
   </body>
 </html>
